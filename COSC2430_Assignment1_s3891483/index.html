@@ -1,3 +1,13 @@
+<!--RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Your names (e.g. Nguyen Van Minh)
+  ID: Your student ids (e.g. 1234567)
+  Acknowledgement: [1] https://fonts.google.com/
+  Acknowledgement: [2] https://fontawesome.com/
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,22 +16,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- font awesome [2]-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <!-- Logo img -->
-      <a href="#" class="logo">
+      <a href="#Home" class="logo">
         <img src="images/logo.png" alt="" />
       </a>
 
-      <!-- Nav bar -->
+      <!-- Navigator bar -->
       <nav class="navbar">
-        <a href="#home">Home</a>
+        <a href="#Home">Home</a>
         <a href="#Category">Category</a>
         <a href="#Details">Details</a>
         <a href="#Contact">Contact</a>
       </nav>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-button"></div>
+        <div class="fas fa-shopping-cart" id="cart-button"></div>
+        <div class="fas fa-bars" id="menu-button"></div>
+      </div>
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="search" id="search-box" placeholder="Search Books" />
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+
+      <!-- The God Father Book -->
+      <div class="cart-container">
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/The God Father Book.png" alt="" />
+          <div class="content">
+            <h3>The God Father Book</h3>
+            <div class="price">450,000 VND/-</div>
+          </div>
+        </div>
+
+        <!-- Calculus Book-->
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/Calculus Book.png" alt="" />
+          <div class="content">
+            <h3>Calculus Book</h3>
+            <div class="price">990,000 VND/-</div>
+          </div>
+        </div>
+
+        <!-- Thinking, fast and slow book-->
+        <div class="cart-items">
+          <span class="fas fa-times"></span>
+          <img src="images/Thinking, fast and slow book.png" alt="" />
+          <div class="content">
+            <h3>Thinking, fast and slow book</h3>
+            <div class="price">300,000 VND/-</div>
+          </div>
+        </div>
+
+        <a href="#Checkout" class="button">checkout</a>
+      </div>
+
+      <header>
+        <body>
+          <html></html>
+        </body>
+      </header>
     </header>
   </body>
 </html>
