@@ -7,16 +7,15 @@
   Acknowledgement: [1] https://fonts.google.com/
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap");
-
-/* Color and Font Style */
+/* Define Color Style */
 :root {
   --main-color: #be8233;
   --cream: #e2c061;
   --white: #ffffff;
-  --black: 0.1rem solid rgb(0, 0, 0);
+  --black: 0.1rem solid rgba(0, 0, 0, 0.253);
 }
 
+/* Fonts from Google Fonts [1] */
 * {
   font-family: "Roboto Mono", monospace;
   margin: 0;
@@ -27,6 +26,8 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
+  scroll-behavior: smooth;
+  list-style: none;
 }
 
 /* Scroll Feature
@@ -59,7 +60,7 @@ body {
   margin-top: 1rem;
   display: inline-block;
   padding: 0.7rem 3rem;
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--cream);
   background: rgb(255, 236, 195);
   cursor: pointer;
@@ -75,10 +76,11 @@ body {
   background: var(--white);
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 2rem 7%;
+  justify-content: space-between;
+  padding: 1.5rem 10%;
   border-bottom: var(--black);
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -86,7 +88,8 @@ body {
 }
 
 .header .logo img {
-  height: 6rem;
+  height: auto;
+  max-width: 7.5rem;
 }
 
 /* Header Navigator Bar */
@@ -96,13 +99,15 @@ body {
 }
 .header .navbar a {
   margin: 0 5rem;
-  font-size: 2.5rem;
+  font-size: 1.2rem;
   color: var(--cream);
+  transition: all 0.42s ease;
+  font-weight: 400;
 }
 .header .navbar a:hover {
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
-  padding-bottom: 0.5rem;
+  transform: scale(1.1);
 }
 
 /* Icons Style [2] */
@@ -114,19 +119,26 @@ body {
 .header .icons div {
   color: var(--cream);
   cursor: pointer;
-  font-size: 2.5rem;
-  margin-left: 3rem;
+  font-size: 1.3rem;
+  margin-right: 3rem;
+  transition: all 0.42s ease;
 }
 
 .header .icons div:hover {
   color: var(--main-color);
+  transform: scale(1.1);
+}
+
+#menu-button {
+  font-size: 1.3rem;
+  z-index: 10001;
 }
 
 /* Search bar */
 .header .search-bar {
   position: absolute;
   top: 115%;
-  right: 20%;
+  right: 15%;
   background: var(--white);
   width: 20rem;
   height: 5rem;
@@ -137,7 +149,7 @@ body {
 .header .search-bar input {
   height: 100%;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: var(--border);
   padding: 1rem;
   text-transform: none;
@@ -145,7 +157,7 @@ body {
 
 .header .search-bar label {
   cursor: pointer;
-  font-size: 2.2rem;
+  font-size: 1rem;
   margin-right: 1.5;
   color: var(--cream);
 }
@@ -154,13 +166,13 @@ body {
   color: var(--main-color);
 }
 
-/* Cart Container */
+/* Cart */
 .header .cart-container {
   position: absolute;
   top: 100%;
   right: 2%;
   height: calc(100vh - 9.5rem);
-  width: 35rem;
+  width: 20rem;
   background: var(--black);
   padding: 0 1.5rem;
 }
@@ -174,14 +186,14 @@ body {
   margin: 2rem 0;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .header .cart-container .cart-items .fa-times {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--cream);
 }
@@ -191,17 +203,17 @@ body {
 }
 
 .header .cart-container .cart-items img {
-  height: 10rem;
+  height: 7rem;
 }
 
 .header .cart-container .cart-items .content h3 {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--cream);
   padding-bottom: 0.5rem;
 }
 
 .header .cart-container .cart-items .content .price {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
 }
 
