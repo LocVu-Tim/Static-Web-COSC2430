@@ -32,32 +32,67 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
-      <!-- Logo img -->
-      <a href="#" class="logo">
-        <img src="images/logo.png" alt="" />
-      </a>
+    <header>
+      <div class="header">
+        <div class="main-header">
+          <div class="top-header">
+            <!-- Logo img -->
+            <div class="logo">
+              <a href="index.html"></a>
+              <img src="images/logo.png" alt="" />
+            </div>
+            <form action="#" class="search-bar">
+              <input type="search" id="search-box" placeholder="Search Books" />
+              <div class="search-icon">
+                <i class="fa fa-search"></i>
+              </div>
+            </form>
+            <div class="info">
+              <div class="fas fa-shopping-cart" id="cart-button"></div>
+              <li>
+                <a href="login.html" class="button sign-in">Sign in</a>
+              </li>
+            </div>
+          </div>
 
-      <!-- Navigator bar -->
-      <nav class="navbar">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#Categories.html">Categories</a></li>
-        <li><a href="#Book-Detail.html">Book Detail</a></li>
-        <li><a href="#Contact.html">Contact</a></li>
-      </nav>
-
-      <!-- Icons for Search, Cart, and Menu buttons
-           I wanted to use div to later implement dropdown features -->
-      <div class="icons">
-        <div class="fas fa-search" id="search-button"></div>
-        <div class="fas fa-shopping-cart" id="cart-button"></div>
-        <div class="fas fa-bars" id="menu-button"></div>
-      </div>
-
-      <!-- Search bar -->
-      <div class="search-bar">
-        <input type="search" id="search-box" placeholder="Search Books" />
-        <label for="search-box" class="fas fa-search"></label>
+          <div class="bottom-header">
+            <div class="menu">
+              <ul id="navbar">
+                <li>
+                  <a href="index.html">Home</a>
+                </li>
+                <li>
+                  <a href="#" class="Categories"> Categories</a>
+                  <ul class="submenu">
+                    <li>
+                      <a href="Categories/Fiction.html">Fiction Books</a>
+                    </li>
+                    <li>
+                      <a href="Categories/Non-Fiction.html"
+                        >Non-Fiction Books</a
+                      >
+                    </li>
+                    <li>
+                      <a href="Categories/Children.html">Children Books</a>
+                    </li>
+                    <li>
+                      <a href="Categories/Reference.html">Reference Books</a>
+                    </li>
+                    <li>
+                      <a href="Categories/Textbook.html">Textbook Books</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="Book-Detail.html">Book Detail</a>
+                </li>
+                <li>
+                  <a href="Contact.html">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   </body>
