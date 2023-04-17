@@ -15,7 +15,7 @@
   --black: 0.1rem solid rgba(0, 0, 0, 0.253);
 }
 
-/* Fonts from Google Fonts [1] */
+/* Fonts from Google Fonts [1] Applied to all elements */
 * {
   font-family: "Roboto Mono", monospace;
   margin: 0;
@@ -34,7 +34,73 @@ body {
   background: var(--white);
 }
 
-/* Header Style */
+.bottom-header .list {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+/********** Responsive ***********/
+@media screen and (max-width: 1000px) {
+  .main-header .top-header {
+    display: none;
+  }
+  .info li {
+    display: none;
+  }
+  .logo {
+    display: block;
+    margin: 0;
+  }
+  .search-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .bottom-header {
+    top: 0;
+    z-index: 1;
+  }
+  .menu ul {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    width: 10rem;
+    text-align: center;
+  }
+  .menu ul {
+    display: none;
+  }
+  .menu ul > li:hover > ul.submenu {
+    left: 8rem
+  }
+
+  /********** Finaly!!! **********/
+  .list-menu {
+    display: block;
+    position: relative;
+    cursor: pointer;
+  }
+  .bottom-header .list {
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    z-index: 1;
+    cursor: pointer;
+    right: 1.7rem;
+    color: var(--cream);
+    font-size: 1.3rem;
+    display: block;
+  }
+  #list-menu:checked ~ .bottom-header .menu ul {
+    display: inline-block;
+  }
+}
+
+/*********** Header Style **********/
 .main-header .top-header {
   padding: 1rem 0;
 }
@@ -55,7 +121,7 @@ body {
 
 .logo img {
   height: auto;
-  max-width: 8rem;
+  max-width: 9rem;
 }
 
 /* Search bar */
@@ -71,8 +137,8 @@ body {
   font-size: 1.2rem;
   color: var(--cream);
   position: absolute;
-  top: 14px;
-  right: 1px;
+  top: 11px;
+  right: 2rem;
 }
 
 .top-header .search-bar .search-icon:hover {
@@ -88,9 +154,10 @@ body {
 .top-header .search-bar input {
   border: 1px solid rgba(0, 0, 0, 0.116);
   border-radius: 30px;
-  padding: 10px 20px;
-  width: 90%;
-  height: 50px;
+  padding: 5px 20px;
+  padding-right: 4rem;
+  width: 95%;
+  height: 45px;
 }
 
 .top-header .search-bar input::placeholder {
@@ -98,7 +165,7 @@ body {
   font-size: 1rem;
 }
 
-/* Cart and Sign in button Style [2] */
+/* Cart icon and Sign in button Style [2] */
 .top-header .info {
   display: flex;
   align-items: center;
@@ -108,8 +175,9 @@ body {
   color: var(--cream);
   cursor: pointer;
   font-size: 1.3rem;
-  margin-right: 2rem;
+  margin-right: 1.5rem;
   transition: all 0.42s ease;
+  height: auto;
 }
 
 .top-header .info div:hover {
@@ -142,6 +210,12 @@ body {
 .bottom-header {
   background: cornsilk;
   text-align: center;
+  justify-content: space-around;
+  padding: 0 2rem;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+  left: 0;
 }
 .bottom-header .menu ul li {
   display: inline-block;
@@ -158,6 +232,14 @@ body {
   padding: 0.9rem 1rem;
   position: relative;
 }
+@media screen and (max-width: 1000px) {
+  .bottom-header .menu ul li a {
+    display: block;
+    padding: 0.5rem 0rem;
+    position: relative;
+  }
+}
+
 .bottom-header .menu ul li:hover > a {
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
