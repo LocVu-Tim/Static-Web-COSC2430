@@ -14,7 +14,6 @@
   --white: #ffffff;
   --black: 0.1rem solid rgba(0, 0, 0, 0.253);
 }
-
 /* Fonts from Google Fonts [1] Applied to all elements */
 * {
   font-family: "Roboto Mono", monospace;
@@ -29,47 +28,15 @@
   scroll-behavior: smooth;
   list-style: none;
 }
-
-body {
-  background: var(--white);
-}
-
 section {
-  padding: 2rem 7%;
-}
-
-.bottom-header .list {
-  display: none;
-}
-
-nav input {
-  display: none;
-}
-
-.heading a h1{
-  color: rgb(0, 0, 0);
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
-}
-.heading span {
-  color: var(--cream);
+  padding: 1px 7%;
 }
 
 /*********** Header Style **********/
-.main-header .top-header {
-  padding: 1rem 0;
-}
-
 .header {
   background: var(--white);
   display: block;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 10%;
+  padding: 0 20%;
   position: fixed;
   width: 100%;
   top: 0;
@@ -77,19 +44,43 @@ nav input {
   right: 0;
   z-index: 1000;
 }
-
-.logo img {
-  height: auto;
-  max-width: 9rem;
-}
-
-/*********** Search bar **********/
 .top-header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   width: 100%;
+}
+.logo img {
+  height: 60px;
+  max-width: 9rem;
+  cursor: pointer;
+}
+.bottom-logo img {
+  margin-left: 1rem;
+  max-width: 5rem;
+  display: none;
+  position: fixed;
+  mix-blend-mode: multiply;
+}
+/*********** Search bar **********/
+.top-header .search-bar {
+  position: relative;
+  width: 530px;
+  text-align: center;
+  margin-left: 90px;
+}
+.top-header .search-bar input {
+  border: 1px solid rgba(0, 0, 0, 0.116);
+  border-radius: 30px;
+  padding: 5px 20px;
+  padding-right: 4rem;
+  width: 95%;
+  height: 45px;
+}
+.top-header .search-bar input::placeholder {
+  color: var(--cream);
+  font-size: 1rem;
 }
 .top-header .search-bar .search-icon {
   cursor: pointer;
@@ -99,37 +90,16 @@ nav input {
   top: 11px;
   right: 2rem;
 }
-
 .top-header .search-bar .search-icon:hover {
   color: var(--main-color);
   transform: scale(1.1);
 }
-.top-header .search-bar {
-  position: relative;
-  width: 530px;
-  text-align: center;
-}
 
-.top-header .search-bar input {
-  border: 1px solid rgba(0, 0, 0, 0.116);
-  border-radius: 30px;
-  padding: 5px 20px;
-  padding-right: 4rem;
-  width: 95%;
-  height: 45px;
-}
-
-.top-header .search-bar input::placeholder {
-  color: var(--cream);
-  font-size: 1rem;
-}
-
-/* Cart icon and Sign in button Style [2] */
+/*********** Cart icon and Sign in button Style [2] **********/
 .top-header .info {
   display: flex;
   align-items: center;
 }
-
 .top-header .info div {
   color: var(--cream);
   cursor: pointer;
@@ -138,7 +108,6 @@ nav input {
   transition: all 0.42s ease;
   height: auto;
 }
-
 .top-header .info div:hover {
   color: var(--main-color);
   transform: scale(1.1);
@@ -159,18 +128,15 @@ nav input {
   line-height: 1;
   text-align: center;
 }
-
 .top-header .info li:hover a {
   transform: scale(1.1);
   color: var(--main-color);
 }
 
-/* Header Navigator Bar (main menu) */
+/*********** Header Navigator Bar (main menu) **********/
 .bottom-header {
   background: cornsilk;
   text-align: center;
-  justify-content: space-around;
-  padding: 0 2rem;
   z-index: 1;
   width: 100%;
   position: fixed;
@@ -180,31 +146,28 @@ nav input {
   display: inline-block;
   position: relative;
   z-index: 1;
-  margin: 0 4px;
 }
 .bottom-header .menu ul li a {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--cream);
   transition: all 0.42s ease;
-  font-weight: 400;
   display: block;
   padding: 0.9rem 1rem;
   position: relative;
 }
 
+/*********** Categories Submenu ***********/
 .bottom-header .menu ul li:hover > a {
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   transform: scale(1.1);
 }
-
 .menu ul > li:hover > ul.submenu {
   display: block;
   opacity: 1;
   top: 100%;
 }
 
-/*********** Categories Submenu ***********/
 .bottom-header .menu ul ul.submenu {
   color: var(--main-color);
   display: none;
@@ -219,12 +182,10 @@ nav input {
   border-radius: 5px 5px 0 0;
   transition: all 0.4s ease-out 0s;
 }
-
 .bottom-header .menu ul ul.submenu > li {
   margin-left: 7px;
   display: block;
 }
-
 .bottom-header .menu ul ul.submenu > li > a {
   padding: 8px 10px;
   font-size: 1rem;
@@ -232,7 +193,6 @@ nav input {
   text-align: left;
   text-transform: capitalize;
 }
-
 .bottom-header .menu ul ul.submenu > li > a:hover {
   color: var(--main-color);
   transform: scale(1.1);
@@ -240,9 +200,32 @@ nav input {
 
 /*********** Homepage ***********/
 .home {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
+/*********** Heading **********/
+.heading h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
+  margin-top: 3rem;
+  top: 0;
+}
+.heading span {
+  color: var(--cream);
+}
+.heading .heading-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 3;
+}
+.firstline h1 {
+  top: 0;
+  margin-top: 0;
+}
+
+/*********** Images **********/
 .img-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
@@ -263,27 +246,28 @@ nav input {
   margin-bottom: 0.5rem;
 }
 
-.img-container .images h3{
+.img-container .images h3 {
   margin: 1rem 0;
   font-size: 1.2rem;
   color: var(--cream);
   display: block;
 }
 
-.img-container .images a{
+.img-container .images a {
   font-size: 1rem;
-  color:rgb(175, 103, 9);
+  color: rgb(175, 103, 9);
   line-height: 2;
   display: block;
 }
 
-.img-container .images a:hover{
+.img-container .images a:hover {
   text-decoration: underline;
   color: var(--main-color);
 }
 
-
-
+.img-container .images img:hover {
+  height: 20rem;
+}
 
 /* Cart 
 .header .cart-container {
@@ -343,14 +327,19 @@ nav input {
 */
 
 /*********** Media Queries [3] ***********/
+.bottom-header .list {
+  display: none;
+}
+nav input {
+  display: none;
+}
 @media (max-width: 1000px) {
   section {
     padding: 2rem;
   }
-  html{
-    font-size: 70%;
+  html {
+    font-size: 50%;
   }
-
 }
 
 /********** Header Responsive ***********/
@@ -370,14 +359,15 @@ nav input {
   }
 }
 
+/*********** Navigator bar ***********/
 @media screen and (max-width: 1000px) {
-  /*********** Navigator bar ***********/
   .bottom-header {
     top: 0;
     z-index: 1;
     position: absolute;
+    padding: 10px;
   }
-  .menu ul {
+  .menu {
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -385,11 +375,23 @@ nav input {
     text-align: center;
     margin: 0;
   }
-  .menu ul {
+  .navmenu {
     display: none;
   }
   .menu ul > li:hover > ul.submenu {
     left: 8rem;
+  }
+  .bottom-logo img {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    height: auto;
+    max-width: 4.5rem;
+    left: 1.7rem;
+  }
+  #list-menu:checked ~ nav .bottom-logo img {
+    display: none;
   }
 
   /********** List Menu Finaly!!! **********/
@@ -401,12 +403,12 @@ nav input {
   .bottom-header .list {
     position: absolute;
     margin: 0;
-    top: 10px;
+    top: 5px;
     z-index: 1;
     cursor: pointer;
     right: 1.7rem;
     color: var(--cream);
-    font-size: 1.3rem;
+    font-size: 2rem;
     display: block;
   }
   #list-menu:checked ~ .bottom-header .menu ul {
@@ -425,7 +427,7 @@ nav input {
 
 @media screen and (max-width: 1000px) {
   .home {
-    margin-top: 15px;
+    margin-top: 5rem;
   }
 }
 

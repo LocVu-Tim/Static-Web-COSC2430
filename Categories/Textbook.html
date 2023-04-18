@@ -29,69 +29,237 @@
     />
   </head>
   <body>
-    <!-- Header -->
+    <!---------- Header ----------->
     <header>
       <div class="header">
+        <!-- Divided Header into two Top and Bottom-->
         <div class="main-header">
+          <!-- Top Header -->
           <div class="top-header">
             <!-- Logo img -->
             <div class="logo">
-              <a href="index.html"></a>
-              <img src="../images/logo.png" alt="" />
+              <li>
+                <a href="../index.html">
+                  <img src="../images/logo.png" alt="Book Store Logo" />
+                </a>
+              </li>
             </div>
+            <!-- Search Bar -->
             <form action="#" class="search-bar">
               <input type="search" id="search-box" placeholder="Search Books" />
+              <!-- Search Icon [2]-->
               <div class="search-icon">
                 <i class="fa fa-search"></i>
               </div>
             </form>
+            <!-- Cart Icon and Sign in button-->
             <div class="info">
               <div class="fas fa-shopping-cart" id="cart-button"></div>
               <li>
-                <a href="../Navbar/login.html" class="button"
-                  >Sign in</a
-                >
+                <a href="../Navbar/login.html" class="button">Sign in</a>
               </li>
             </div>
           </div>
 
-          <div class="bottom-header">
-            <div class="menu">
-              <ul id="navbar">
+          <!-- Bottom Header -->
+          <nav>
+            <input type="checkbox" id="list-menu" />
+            <div class="bottom-header">
+              <!-- Navigator -->
+              <label for="list-menu" class="list">
+                <span class="fas fa-bars" id="list-icon"></span>
+              </label>
+              <div class="bottom-logo">
                 <li>
-                  <a href="../index.html">Home</a>
+                  <a href="../index.html">
+                    <img src="../images/logo.png" alt="Book Store Logo" />
+                  </a>
                 </li>
-                <li>
-                  <a href="#" class="Categories"> Categories</a>
-                  <ul class="submenu">
-                    <li>
-                      <a href="../Categories/Fiction.html">Fiction</a>
-                    </li>
-                    <li>
-                      <a href="../Categories/Non-Fiction.html">Non-Fiction</a>
-                    </li>
-                    <li>
-                      <a href="../Categories/Children.html">Children</a>
-                    </li>
-                    <li>
-                      <a href="../Categories/Reference.html">Reference</a>
-                    </li>
-                    <li>
-                      <a href="../Categories/Textbook.html">Textbook</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="../Navbar/Book-Detail.html">Book Detail</a>
-                </li>
-                <li>
-                  <a href="../Navbar/Contact.html">Contact</a>
-                </li>
-              </ul>
+              </div>
+              <div class="menu">
+                <ul class="navmenu" id="navbar">
+                  <li>
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="Categories"> Categories</a>
+
+                    <!-- Submenu for categories -->
+                    <ul class="submenu">
+                      <li>
+                        <a href="../Categories/Fiction.html">Fiction</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Non-Fiction.html">Non-Fiction</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Children.html">Children</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Reference.html">Reference</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Textbook.html">Textbook</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../Navbar/Book-Detail.html">Book Detail</a>
+                  </li>
+                  <li>
+                    <a href="../Navbar/Contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+          </nav>
         </div>
       </div>
     </header>
+    <!---------- Header End ----------->
+
+    <!---------- Homepage ----------->
+    <section class="home">
+      <!---------- Curriculum  Textbooks ----------->
+      <div class="heading firstline">
+        <div class="heading-title">
+          <h1>Curriculum <span> Textbooks</span></h1>
+        </div>
+        <div class="img-container">
+          <div class="images">
+            <img src="../images/Textbook/Cur1.png" alt="The God Father" />
+            <h3>Supporting Technology Integration for School Leaders</h3>
+            <div class="price">500,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+
+          <div class="images">
+            <img src="../images/Textbook/Cur2.png" alt="" />
+            <h3>
+              Intersections of Open Educational Resources and Information
+              Literacy
+            </h3>
+            <div class="price">549,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+
+          <div class="images">
+            <img src="../images/Textbook/Cur3.png" alt="" />
+            <h3>Using Open Educational Resources to Promote Social Justice</h3>
+            <div class="price">560,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+        </div>
+      </div>
+
+      <!---------- Electrical Engineering Book ----------->
+      <div class="heading non-fiction">
+        <div class="heading-title">
+          <h1>Electrical Engineering<span> Textbooks</span></h1>
+        </div>
+        <div class="img-container">
+          <div class="images">
+            <img src="../images/Textbook/elec1.png" alt="" />
+            <h3>Open Signals and Systems Laboratory Exercises</h3>
+            <div class="price">490,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/elec2.png" alt="" />
+            <h3>DC Electrical Circuit Analysis</h3>
+            <div class="price">475,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/elec3.png" alt="" />
+            <h3>AC Electrical Circuit Analysis</h3>
+            <div class="price">470,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+        </div>
+      </div>
+
+      <!---------- Finance Textbooks ----------->
+      <div class="heading Children">
+        <div class="heading-title">
+          <h1>Finance <span> Textbooks</span></h1>
+        </div>
+
+        <div class="img-container">
+          <div class="images">
+            <img src="../images/Textbook/finance1.png" alt="" />
+            <h3>Principles of Finance</h3>
+            <div class="price">349,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/finance2.png" alt="" />
+            <h3>Liquidity, Markets and Trading in Action</h3>
+            <div class="price">349,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/finance3.png" alt="" />
+            <h3>Financial Management for Small Businesses</h3>
+            <div class="price">349,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+        </div>
+      </div>
+
+      <!---------- Calculus Textbooks ----------->
+      <div class="heading Reference">
+        <div class="heading-title">
+          <h1>Calculus<span> Textbooks</span></h1>
+        </div>
+        <div class="img-container">
+          <div class="images">
+            <img src="../images/Textbook/cal1.png" alt="" />
+            <h3>Elementary Calculus</h3>
+            <div class="price">800,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/cal2.png" alt="" />
+            <h3>Multivariable Calculus</h3>
+            <div class="price">850,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/cal3.png" alt="" />
+            <h3>Ordinary Differential Equations</h3>
+            <div class="price">750,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+        </div>
+      </div>
+
+      <!----------Music TextBook ----------->
+      <div class="heading Textbooks">
+        <div class="heading-title">
+          <h1>Music<span> Textbooks</span></h1>
+        </div>
+        <div class="img-container">
+          <div class="images">
+            <img src="../images/Textbook/music1.png" alt="" />
+            <h3>Music Appreciation: History, Culture, and Context</h3>
+            <div class="price">88,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/music2.png" alt="" />
+            <h3>The Bible and Music</h3>
+            <div class="price">94,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+          <div class="images">
+            <img src="../images/Textbook/music3.png" alt="" />
+            <h3>Foundational Sight Singing</h3>
+            <div class="price">127,000 VND</div>
+            <a href="#" class="button">purchase</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
