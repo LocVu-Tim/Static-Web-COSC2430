@@ -276,7 +276,7 @@ section {
 }
 
 .img-container .images img:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 
 
@@ -378,6 +378,33 @@ p{
   text-decoration: underline;
   color: var(--main-color);
 }
+
+.container{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  flex: 1 1 40rem;
+}
+.container .book-img img{
+  height: 20rem;
+  width: 100%;
+  object-fit: contain;
+}
+.container .small-img{
+  
+  flex-wrap:unset;
+  margin-top: 1rem;
+  gap: .5rem;
+}
+
+.container .small-img img{
+height: 7rem;
+width: 10rem;
+transition: .2s linear;
+}
+
 
 
 
@@ -521,7 +548,7 @@ nav input {
     top: 0;
     z-index: 1;
     position: absolute;
-    padding: 10px;
+    padding: 17px;
   }
   .menu {
     display: inline-block;
@@ -534,17 +561,23 @@ nav input {
   .navmenu {
     display: none;
   }
+
+  .bottom-header .menu ul li a {
+    display: block;
+    padding: 0.3rem 0rem;
+  }
   .menu ul > li:hover > ul.submenu {
     left: 8rem;
   }
+
   .bottom-logo img {
     display: block;
     position: absolute;
     margin: 0;
-    top: 0;
+    top: 7px;
     height: auto;
     max-width: 4.5rem;
-    left: 1.7rem;
+    left: 3rem;
   }
   #list-menu:checked ~ nav .bottom-logo img {
     display: none;
@@ -559,25 +592,19 @@ nav input {
   .bottom-header .list {
     position: absolute;
     margin: 0;
-    top: 5px;
+    top: 7px;
     z-index: 1;
     cursor: pointer;
     right: 1.7rem;
     color: var(--cream);
-    font-size: 2rem;
+    font-size: 3rem;
     display: block;
   }
   #list-menu:checked ~ .bottom-header .menu ul {
     display: inline-block;
   }
 }
-@media screen and (max-width: 1000px) {
-  .bottom-header .menu ul li a {
-    display: block;
-    padding: 0.5rem 0rem;
-    position: relative;
-  }
-}
+
 
 /********** Page ***********/
 

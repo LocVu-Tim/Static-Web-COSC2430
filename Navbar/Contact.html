@@ -130,15 +130,18 @@
         <div class="contact-img">
           <img src="../images/contact.png" alt="" />
         </div>
-        <form action="" method="post">
+        <form action="#" method="post">
           <h1>Contact<span> Us</span></h1>
 
           <!--Dropdown-->
-          <select name="method" class="select" required>
-            <option value="" disabled selected>contact purpose</option>
-            <option value="I want to sell books">I want to sell books</option>
-            <option value="I want to buy books">I want to buy books</option>
-          </select>
+          <label for="purpose" title="Contact Purpose"
+            >
+            <select name="purpose" class="select" required>
+              <option value="" disabled selected>contact purpose</option>
+              <option value="I want to sell books">I want to sell books</option>
+              <option value="I want to buy books">I want to buy books</option>
+            </select></label
+          >
 
           <input
             type="text"
@@ -154,7 +157,6 @@
             maxlength="50"
             class="box"
             placeholder="Enter Your Email"
-            
           /><input
             type="number"
             name="phonenumber"
