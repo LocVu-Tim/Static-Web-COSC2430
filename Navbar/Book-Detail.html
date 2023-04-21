@@ -13,7 +13,9 @@
   Acknowledgement: [7] https://www.librarything.com/ (Reference Books imgs)
   Acknowledgement: [8] https://open.umn.edu/opentextbooks/ (Textbooks imgs)
   Acknowledgement: [9] https://www.scribd.com/books/Reference/Etiquette (Reference books)
-
+  Acknowledgement: [10] https://www.youtube.com/watch?v=99muDSuP55s&list=PL9bD98LkBR7P8MYh0RzNSHgeVNTA8g0nB&index=2 (Book detail page idea)
+  Acknowledgement: [11] https://www.youtube.com/watch?v=UaVTIH8mujA (The God Father youtube video trailer)
+  Acknowledgement: [12] https://www.goodreads.com/book/show/22034.The_Godfather (The God Father detail)
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +79,7 @@
               </label>
               <div class="bottom-logo">
                 <li>
-                  <a href="./index.html">
+                  <a href="../index.html">
                     <img src="../images/logo.png" alt="Book Store Logo" />
                   </a>
                 </li>
@@ -149,13 +151,34 @@
         </div>
 
         <div class="Details">
-          <h3>The God Father</h3>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            ipsum atque nihil laboriosam rem hic ipsa voluptatem quos labore ea.
-          </p>
+          <!--Reference from [10]-->
+          <h2>The God Father</h2>
+          <h3>500,000 VND</h3>
+
+          <label for="cover" title="Book cover">
+            <!--Dropdown option for book cover-->
+            <select name="cover" class="select" required>
+              <option value="" disabled selected>Book Cover</option>
+              <option value="Softcover">Softcover</option>
+              <option value="Hardcover">Hardcover</option>
+            </select></label
+          >
+
+          <input type="number" class="number" value="1" />
+          <!--input number of books added to cart-->
 
           <input type="button" value="Add to Cart" class="button" />
+
+          <h4>Book Detail</h4>
+          <p> <!--The God Father detail [12]-->
+            The seduction of power, the pitfalls of greed, and the allegiance to family—these are the themes that have resonated with millions of readers around the world and made The Godfather the definitive novel of the violent subculture that, steeped in intrigue and controversy, remains indelibly etched in our collective consciousness.
+          </p>
+          <span> <!--Embeded Video Trailer of The God Father [11]-->
+            <iframe
+              width="420"
+              height="250"
+              src="https://www.youtube.com/embed/UaVTIH8mujA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </span>
         </div>
       </div>
     </section>

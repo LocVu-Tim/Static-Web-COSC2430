@@ -37,7 +37,7 @@
   scroll-behavior: smooth;
   list-style: none;
 }
-body{
+body {
   min-height: 100vh;
 }
 section {
@@ -129,7 +129,7 @@ section {
 
 /* Buttons Style */
 
-.button{
+.button {
   display: inline-block;
   padding: 1rem 1.4rem;
   color: rgb(175, 103, 9);
@@ -143,7 +143,7 @@ section {
   line-height: 1;
   text-align: center;
 }
-.button:hover{
+.button:hover {
   transform: scale(1.1);
   color: var(--main-color);
 }
@@ -272,31 +272,27 @@ section {
 .img-container .images a:hover {
   text-decoration: underline;
   color: var(--main-color);
- 
 }
 
 .img-container .images img:hover {
   transform: scale(1.2);
 }
 
-
-
 /********************************* Contact Page ********************************/
-.contact .row{
+.contact .row {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
-.contact .row .contact-img{
+.contact .row .contact-img {
   flex: 1 1 40rem;
 }
-.contact .row .contact-img img{
+.contact .row .contact-img img {
   width: 100%;
   margin-top: 17rem;
-  
 }
-.contact .row form{
+.contact .row form {
   border: var(--border);
   flex: 1 1 40rem;
   padding: 2rem;
@@ -304,170 +300,202 @@ section {
   margin-bottom: 3rem;
   border-radius: 20px;
 }
-.contact .row form h1{
+.contact .row form h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: capitalize;
   text-align: center;
 }
-.contact .row form h1 span{
+.contact .row form h1 span {
   color: var(--cream);
 }
-.contact .row form .box{
-  margin: .5rem 0;
+.contact .row form .box {
+  margin: 0.5rem 0;
   border: var(--border);
   border-radius: 30px;
   padding: 1.3rem;
   width: 95%;
 }
-.contact .row form .box::placeholder{
+.contact .row form .box::placeholder {
   color: rgba(0, 0, 0, 0.699);
   font-size: 1.3rem;
 }
-.contact .row form textarea{
+.contact .row form textarea {
   height: 15rem;
-  resize: none; 
+  resize: none;
 }
 
-.contact .row form .select{
+.contact .row form .select {
   padding: 1.3rem;
   font-size: 1.1rem;
   color: rgba(0, 0, 0, 0.699);
   border: var(--border);
   border-radius: 30px;
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   width: 50%;
 }
-.news-check{
+.news-check {
   font-size: 1.3rem;
-  margin: .5rem 0rem;
+  margin: 0.5rem 0rem;
   border: var(--border);
   border-radius: 30px;
   width: 95%;
   padding: 1.3rem;
   color: rgba(0, 0, 0, 0.699);
 }
-label {
+.news-check label {
   font-size: 1.1rem;
   color: rgba(0, 0, 0, 0.699);
 }
-p{
-  margin: .5rem 0;
+.news-check p {
+  margin: 0.5rem 0;
 }
 
-.contact .row form .button{
+.contact .row form .button {
   margin: 0.5rem 1rem;
 }
 
 /********************************* Book Detail Page ********************************/
 
-.page-heading{
+.page-heading {
   display: flex;
   align-items: start;
-  gap: 1rem;
-  flex-flow: column;
-  min-height: 10rem;
+  margin-left: 10rem;
 }
-.page-heading p{
-  font-size: 1rem;
+.page-heading p {
+  font-size: 1.2rem;
 }
-.page-heading p a{
+.page-heading p a {
   color: var(--cream);
 }
-.page-heading p a:hover{
+.page-heading p a:hover {
   text-decoration: underline;
   color: var(--main-color);
 }
 
-
-.home .row{
+/* Book Detail Imgs */
+.row {
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-  padding: 1.5rem;
+  justify-content: center;
 }
-.home .row .container{
-  flex: 1 1 30rem;
-}
-.home .row .Details{
-  flex: 1 1 30rem;
-}
-
-.home .row .container .book-img{
-  
-}
-.home .row .container .book-img img{
-  height: 30rem;
-
-  object-fit: contain;
-}
-.home .row .container .small-img{
+.home .row .container {
+  width: 50%;
   display: flex;
-  justify-content: start;
-  margin-top: 1rem;
-  gap: .5rem;
+  align-items: center;
+}
+.book-img {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.book-img img {
+  height: 100%;
+  width: 70%;
+  border: var(--border);
+}
+.small-img {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  width: 40%;
+  justify-content: space-around;
+}
+.small-img img {
+  width: 35%;
+  height: 100%;
+  transition: 0.2s linear;
+  object-fit: contain;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: 20px;
 }
 
-.home .container .small-img img{
-height: 7rem;
-width: 10rem;
-transition: .2s linear;
-object-fit: contain;
-padding: .5rem;
-border: var(--border);
-border-radius: 20px;
+/* Detail */
+.row .Details {
+  width: 40%;
+}
+.Details h2 {
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+.Details h3 {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+.row .Details label {
+  display: block;
+}
+.row .Details .select {
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 10px 0px;
+  border: var(--border);
+  border-radius: 30px;
+}
+.row .Details .number {
+  width: 50px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  margin: 10px 6px;
+  border: var(--border);
+  border-radius: 30px;
 }
 
-
-
-
-
+.Details h4 {
+  padding: 0.5rem 10px;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.Details p {
+  padding: 5px 10px;
+  line-height: 26px;
+  margin-bottom: 2rem;
+}
 
 /********************************* Footer ********************************/
-.footer{
+.footer {
   background: cornsilk;
   text-align: center;
   padding: 0;
   bottom: 0;
-  position:sticky;
+  position: sticky;
   top: 100%;
 }
 
-.footer .footer-nav{
+.footer .footer-nav {
   display: flexbox;
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
   gap: 1rem;
 }
-.footer .footer-nav a{
-  padding: .5rem 2rem;
+.footer .footer-nav a {
+  padding: 0.5rem 2rem;
   color: var(--cream);
   font-size: 1.3rem;
 }
-.footer .footer-nav a:hover{
+.footer .footer-nav a:hover {
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   transform: scale(1.1);
 }
 
-.footer .copyright{
+.footer .copyright {
   font-size: 1rem;
-  color: black;;
+  color: black;
   padding: 1rem;
 }
-.footer .copyright span{
+.footer .copyright span {
   color: var(--main-color);
 }
 
-
-
-
-
-
-
-/*********** Media Queries [3] ***********/
+/********************************* Media Queries [3] ********************************/
 .bottom-header .list {
   display: none;
 }
@@ -506,7 +534,7 @@ nav input {
     top: 0;
     z-index: 1;
     position: absolute;
-    padding: 17px;
+    padding: 22px;
   }
   .menu {
     display: flex;
@@ -560,29 +588,50 @@ nav input {
   }
 }
 
-
-/********** Page ***********/
-
+/********** Contact Page ***********/
 @media screen and (max-width: 1000px) {
   .home {
     margin-top: 5rem;
   }
-
-  /********** Contact Page ***********/
-  .contact .row .contact-img img{
+  .contact .row .contact-img img {
     display: none;
   }
-  .contact .row form{
+  .contact .row form {
     margin-top: 5rem;
     display: block;
     flex: content;
-
   }
-
 }
 
-/********** Page ***********/
-
-
+/**********Book Detail Page ***********/
+@media screen and (max-width: 1000px) {
+  .row {
+    margin-top: 2rem;
+  }
+  .home .row .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+  }
+  .container .book-img {
+    width: 100%;
+    height: 100%;
+  }
+  .container .small-img {
+    flex-direction: initial;
+    width: 100%;
+    padding: 1rem;
+    height: 70%;
+  }
+  .row .Details {
+    flex: content;
+    height: fit-content;
+    flex-direction: column;
+  }
+  .row .Details iframe {
+    height: 60%;
+    width: 100%;
+  }
+}
 
 /********** Responsive END ***********/
