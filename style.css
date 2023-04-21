@@ -379,91 +379,49 @@ p{
   color: var(--main-color);
 }
 
-.container{
+
+.home .row{
   display: flex;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
   padding: 1.5rem;
-  flex: 1 1 40rem;
 }
-.container .book-img img{
-  height: 20rem;
-  width: 100%;
+.home .row .container{
+  flex: 1 1 30rem;
+}
+.home .row .Details{
+  flex: 1 1 30rem;
+}
+
+.home .row .container .book-img{
+  
+}
+.home .row .container .book-img img{
+  height: 30rem;
+
   object-fit: contain;
 }
-.container .small-img{
-  
-  flex-wrap:unset;
+.home .row .container .small-img{
+  display: flex;
+  justify-content: start;
   margin-top: 1rem;
   gap: .5rem;
 }
 
-.container .small-img img{
+.home .container .small-img img{
 height: 7rem;
 width: 10rem;
 transition: .2s linear;
+object-fit: contain;
+padding: .5rem;
+border: var(--border);
+border-radius: 20px;
 }
 
 
 
 
-/* Cart 
-.header .cart-container {
-  position: absolute;
-  top: 100%;
-  right: 2%;
-  height: calc(100vh - 9.5rem);
-  width: 20rem;
-  background: var(--black);
-  padding: 0 1.5rem;
-}
-
-.header .cart-container .active {
-  right: 17%;
-}
-
-.header .cart-container .cart-items {
-  position: relative;
-  margin: 2rem 0;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.header .cart-container .cart-items .fa-times {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  color: var(--cream);
-}
-
-.header .cart-container .cart-items .fa-times:hover {
-  color: var(--main-color);
-}
-
-.header .cart-container .cart-items img {
-  height: 7rem;
-}
-
-.header .cart-container .cart-items .content h3 {
-  font-size: 1rem;
-  color: var(--cream);
-  padding-bottom: 0.5rem;
-}
-
-.header .cart-container .cart-items .content .price {
-  font-size: 1rem;
-  color: black;
-}
-
-.header .cart-items .button {
-  width: 100%;
-  text-align: center;
-}
-*/
 
 
 /********************************* Footer ********************************/
@@ -551,12 +509,10 @@ nav input {
     padding: 17px;
   }
   .menu {
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    margin: 0;
   }
   .navmenu {
     display: none;
@@ -567,7 +523,8 @@ nav input {
     padding: 0.3rem 0rem;
   }
   .menu ul > li:hover > ul.submenu {
-    left: 8rem;
+    left: 9rem;
+    top: 0;
   }
 
   .bottom-logo img {
@@ -578,9 +535,6 @@ nav input {
     height: auto;
     max-width: 4.5rem;
     left: 3rem;
-  }
-  #list-menu:checked ~ nav .bottom-logo img {
-    display: none;
   }
 
   /********** List Menu Finaly!!! **********/
@@ -601,7 +555,8 @@ nav input {
     display: block;
   }
   #list-menu:checked ~ .bottom-header .menu ul {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
