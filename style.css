@@ -37,10 +37,15 @@
   scroll-behavior: smooth;
   list-style: none;
 }
+body{
+  min-height: 100vh;
+}
 section {
   padding: 1px 7%;
 }
-
+.home {
+  margin-top: 150px;
+}
 /********************************* Header Style ********************************/
 .header {
   background: var(--white);
@@ -208,11 +213,6 @@ section {
   transform: scale(1.1);
 }
 
-/********************************* Homepage ********************************/
-.home {
-  margin-top: 150px;
-}
-
 /********************************* Heading ********************************/
 .heading h1 {
   color: rgb(0, 0, 0);
@@ -231,7 +231,6 @@ section {
   margin-top: 3;
 }
 .firstline h1 {
-  top: 0;
   margin-top: 0;
 }
 
@@ -273,45 +272,14 @@ section {
 .img-container .images a:hover {
   text-decoration: underline;
   color: var(--main-color);
+ 
 }
 
 .img-container .images img:hover {
-  height: 20rem;
+  transform: scale(1.3);
 }
 
-/********************************* Footer ********************************/
-.footer{
-  background: cornsilk;
-  text-align: center;
-  padding: 0;
-}
 
-.footer .footer-nav{
-  display: flexbox;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0;
-  gap: 1rem;
-}
-.footer .footer-nav a{
-  padding: .5rem 2rem;
-  color: var(--cream);
-  font-size: 1.3rem;
-}
-.footer .footer-nav a:hover{
-  color: var(--main-color);
-  border-bottom: 0.1rem solid var(--main-color);
-  transform: scale(1.1);
-}
-
-.footer .copyright{
-  font-size: 1rem;
-  color: black;;
-  padding: 1rem;
-}
-.footer .copyright span{
-  color: var(--main-color);
-}
 
 /********************************* Contact Page ********************************/
 .contact .row{
@@ -329,14 +297,15 @@ section {
   
 }
 .contact .row form{
-  border: var(--black);
+  border: var(--border);
   flex: 1 1 40rem;
   padding: 2rem;
-  align-items: center;
   margin-top: 10rem;
+  margin-bottom: 3rem;
+  border-radius: 20px;
 }
 .contact .row form h1{
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: capitalize;
   text-align: center;
@@ -346,17 +315,71 @@ section {
 }
 .contact .row form .box{
   margin: .5rem 0;
-  font-size: 1.3rem;
-  color: var(--cream);
   border: var(--border);
   border-radius: 30px;
   padding: 1.3rem;
   width: 95%;
 }
+.contact .row form .box::placeholder{
+  color: rgba(0, 0, 0, 0.699);
+  font-size: 1.3rem;
+}
 .contact .row form textarea{
   height: 15rem;
   resize: none; 
 }
+
+.contact .row form .select{
+  padding: 1.3rem;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.699);
+  border: var(--border);
+  border-radius: 30px;
+  margin: .5rem 0;
+  width: 50%;
+}
+.news-check{
+  font-size: 1.3rem;
+  margin: .5rem 0rem;
+  border: var(--border);
+  border-radius: 30px;
+  width: 95%;
+  padding: 1.3rem;
+  color: rgba(0, 0, 0, 0.699);
+}
+label {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.699);
+}
+p{
+  margin: .5rem 0;
+}
+
+.contact .row form .button{
+  margin: 0.5rem 1rem;
+}
+
+/********************************* Book Detail Page ********************************/
+
+.page-heading{
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  flex-flow: column;
+  min-height: 10rem;
+}
+.page-heading p{
+  font-size: 1rem;
+}
+.page-heading p a{
+  color: var(--cream);
+}
+.page-heading p a:hover{
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+
 
 /* Cart 
 .header .cart-container {
@@ -415,6 +438,50 @@ section {
 }
 */
 
+
+/********************************* Footer ********************************/
+.footer{
+  background: cornsilk;
+  text-align: center;
+  padding: 0;
+  bottom: 0;
+  position:sticky;
+  top: 100%;
+}
+
+.footer .footer-nav{
+  display: flexbox;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 1rem;
+}
+.footer .footer-nav a{
+  padding: .5rem 2rem;
+  color: var(--cream);
+  font-size: 1.3rem;
+}
+.footer .footer-nav a:hover{
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  transform: scale(1.1);
+}
+
+.footer .copyright{
+  font-size: 1rem;
+  color: black;;
+  padding: 1rem;
+}
+.footer .copyright span{
+  color: var(--main-color);
+}
+
+
+
+
+
+
+
 /*********** Media Queries [3] ***********/
 .bottom-header .list {
   display: none;
@@ -422,7 +489,7 @@ section {
 nav input {
   display: none;
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   section {
     padding: 2rem;
   }
@@ -512,20 +579,27 @@ nav input {
   }
 }
 
-/********** Home ***********/
+/********** Page ***********/
 
 @media screen and (max-width: 1000px) {
   .home {
     margin-top: 5rem;
   }
+
+  /********** Contact Page ***********/
   .contact .row .contact-img img{
     display: none;
+  }
+  .contact .row form{
+    margin-top: 5rem;
+    display: block;
+    flex: content;
+
   }
 
 }
 
-/********** Home ***********/
-
+/********** Page ***********/
 
 
 

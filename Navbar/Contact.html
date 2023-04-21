@@ -133,6 +133,13 @@
         <form action="" method="post">
           <h1>Contact<span> Us</span></h1>
 
+          <!--Dropdown-->
+          <select name="method" class="select" required>
+            <option value="" disabled selected>contact purpose</option>
+            <option value="I want to sell books">I want to sell books</option>
+            <option value="I want to buy books">I want to buy books</option>
+          </select>
+
           <input
             type="text"
             name="name"
@@ -147,9 +154,9 @@
             maxlength="50"
             class="box"
             placeholder="Enter Your Email"
-            required
+            
           /><input
-            type="phonenumber"
+            type="number"
             name="phonenumber"
             min="0"
             max="9999999999"
@@ -164,7 +171,36 @@
             maxlength="500"
             cols="30"
             rows="10"
+            required
           ></textarea>
+
+          <div class="news-check">
+            <!--Checkboxes-->
+            <p>contact preference</p>
+            <input type="checkbox" id="pref1" name="pref1" class="check" />
+            <label for="pref1">By email</label><br />
+            <input type="checkbox" id="pref2" name="pref2" class="check" />
+            <label for="pref2">By phone</label>
+
+            <!--Radios-->
+            <p>Receive Weekly Newsletter</p>
+            <input
+              type="radio"
+              id="newsletter1"
+              name="newsletter"
+              class="check"
+              checked
+            />
+            <label for="newsletter1">Yes</label><br />
+
+            <input
+              type="radio"
+              id="newsletter2"
+              name="newsletter"
+              class="check"
+            />
+            <label for="newsletter2">No</label>
+          </div>
           <input type="submit" value="submit" name="send" class="button" />
           <input type="reset" value="reset" class="button" />
         </form>
