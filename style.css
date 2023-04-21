@@ -639,6 +639,16 @@ nav input {
   }
 }
 
+/**********Contact Us ***********/
+@media screen and (max-width: 1000px) {  
+  .contact .row {
+    gap: 0;
+    margin:0;
+  }
+  .contact .row form {
+    margin-top: 2rem;
+  }
+}
 /**********Footer ***********/
 @media screen and (max-width: 1000px) {
   .footer {
