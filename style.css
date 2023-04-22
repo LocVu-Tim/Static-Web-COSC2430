@@ -151,7 +151,7 @@ section {
 }
 
 /********************************* Header Navigator Bar (main menu) ********************************/
-.header .bottom-header {
+.bottom-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -244,7 +244,7 @@ section {
   gap: 1rem;
   place-items: center;
 }
-.img-container .images{
+.img-container .images {
   place-content: center;
   width: fit-content;
   justify-content: center;
@@ -255,10 +255,11 @@ section {
 .images img {
   height: 15rem;
   margin-bottom: 0.5rem;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
-.images h3,.price{
+.images h3,
+.price {
   text-align: center;
 }
 .images h3 {
@@ -267,8 +268,8 @@ section {
   color: var(--cream);
   display: block;
 }
-.images a{
-  padding: .5rem;
+.images a {
+  padding: 0.5rem;
   text-align: center;
   width: 100%;
   place-items: center;
@@ -463,6 +464,64 @@ section {
   margin-bottom: 2rem;
 }
 
+/********************************* Login ********************************/
+.login-home {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/login.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.login-home .login-form{
+  width: 18.8rem;
+  height: 22rem;
+  background: linear-gradient(to top, rgba(255, 248, 220, 0.897), rgba(255, 248, 220, 0.712));
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: 30px;
+  padding: 1rem;
+  margin-top: 10rem;
+}
+.login-form h2{
+  font-size: 2rem;
+  margin: 1rem;
+  color: var(--main-color);
+  text-align: center;
+}
+.login-form input{
+  width: 16rem;
+  height: 2rem;
+  background: transparent;
+  border-bottom: 0.1rem solid var(--main-color);
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.login-form input::placeholder{
+  color: var(--main-color);
+}
+.login-form .button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.login-form p{
+  color: var(--main-color);
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+.login-form .Signup{
+  color: var(--main-color);
+  font-size: 1rem;
+  border-bottom: 0.1rem solid var(--main-color);
+  width: fit-content;
+}
+
+
 /********************************* Footer ********************************/
 .footer {
   display: flex;
@@ -644,10 +703,10 @@ nav input {
 }
 
 /**********Contact Us ***********/
-@media screen and (max-width: 1000px) {  
+@media screen and (max-width: 1000px) {
   .contact .row {
     gap: 0;
-    margin:0;
+    margin: 0;
   }
   .contact .row form {
     margin-top: 2rem;
@@ -673,7 +732,6 @@ nav input {
     color: var(--cream);
     font-size: 1.3rem;
   }
-
 }
 
 /********** Responsive END ***********/

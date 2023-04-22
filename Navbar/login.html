@@ -35,107 +35,77 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-  <body>
+  <body class="main">
     <!---------- Header ----------->
     <header>
-      <div class="header">
-        <!-- Divided Header into two Top and Bottom-->
-        <div class="main-header">
-          <!-- Top Header -->
-          <div class="top-header">
-            <!-- Logo img -->
-            <div class="logo">
-              <li>
-                <a href="../index.html">
-                  <img src="../images/logo.png" alt="Book Store Logo" />
-                </a>
-              </li>
-            </div>
-            <!-- Search Bar -->
-            <form action="#" class="search-bar">
-              <input type="search" id="search-box" placeholder="Search Books" />
-              <!-- Search Icon [2]-->
-              <div class="search-icon">
-                <i class="fa fa-search"></i>
-              </div>
-            </form>
-            <!-- Cart Icon and Sign in button-->
-            <div class="info">
-              <div class="fas fa-shopping-cart" id="cart-button"></div>
-              <li>
-                <a href="../Navbar/login.html" class="button">Sign in</a>
-              </li>
-            </div>
+      <!-- Bottom Header -->
+      <nav>
+        <input type="checkbox" id="list-menu" />
+        <div class="bottom-header">
+          <!-- Navigator -->
+          <label for="list-menu" class="list">
+            <span class="fas fa-bars" id="list-icon"></span>
+          </label>
+          <div class="bottom-logo">
+            <li>
+              <a href="./index.html">
+                <img src="../images/logo.png" alt="Book Store Logo" />
+              </a>
+            </li>
           </div>
+          <div class="menu">
+            <ul class="navmenu" id="navbar">
+              <li>
+                <a href="../index.html">Home</a>
+              </li>
+              <li>
+                <a href="#" class="Categories"> Categories</a>
 
-          <!-- Bottom Header -->
-          <nav>
-            <input type="checkbox" id="list-menu" />
-            <div class="bottom-header">
-              <!-- Navigator -->
-              <label for="list-menu" class="list">
-                <span class="fas fa-bars" id="list-icon"></span>
-              </label>
-              <div class="bottom-logo">
-                <li>
-                  <a href="./index.html">
-                    <img src="../images/logo.png" alt="Book Store Logo" />
-                  </a>
-                </li>
-              </div>
-              <div class="menu">
-                <ul class="navmenu" id="navbar">
+                <!-- Submenu for categories -->
+                <ul class="submenu">
                   <li>
-                    <a href="../index.html">Home</a>
+                    <a href="../Categories/Fiction.html">Fiction</a>
                   </li>
                   <li>
-                    <a href="#" class="Categories"> Categories</a>
-
-                    <!-- Submenu for categories -->
-                    <ul class="submenu">
-                      <li>
-                        <a href="../Categories/Fiction.html">Fiction</a>
-                      </li>
-                      <li>
-                        <a href="../Categories/Non-Fiction.html">Non-Fiction</a>
-                      </li>
-                      <li>
-                        <a href="../Categories/Children.html">Children</a>
-                      </li>
-                      <li>
-                        <a href="../Categories/Reference.html">Reference</a>
-                      </li>
-                      <li>
-                        <a href="../Categories/Textbook.html">Textbook</a>
-                      </li>
-                    </ul>
+                    <a href="../Categories/Non-Fiction.html">Non-Fiction</a>
                   </li>
                   <li>
-                    <a href="../Navbar/Book-Detail.html">Book Detail</a>
+                    <a href="../Categories/Children.html">Children</a>
                   </li>
                   <li>
-                    <a href="../Navbar/Contact.html">Contact Us</a>
+                    <a href="../Categories/Reference.html">Reference</a>
+                  </li>
+                  <li>
+                    <a href="../Categories/Textbook.html">Textbook</a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
+              </li>
+              <li>
+                <a href="../Navbar/Contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
- 
 
-    <!----------Footer ----------->
-    <section class="footer">
+    <!----------login page ----------->
+    <section class="login-home">
+      <div class="login-form">
+        <h2>Sign in</h2>
+        <input type="email" name="email" placeholder="Enter Email" />
+        <input type="password" name="password" placeholder="Enter Password" />
+        <li>
+          <a href="./Navbar/login.html" class="button">Sign in</a>
+        </li>
 
-      <div class="footer-nav">
-        <a href="#">About Us</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="../Navbar/Contact.html">Contact Us</a>
+        <p>You are new?</p>
+        <a href="#" class="Signup">Sign up here!</a>
+
+
       </div>
-      <div class="copyright">Created by <span>Vu Loc</span></div>
     </section>
 
+    <!----------Footer ----------->
   </body>
 </html>
