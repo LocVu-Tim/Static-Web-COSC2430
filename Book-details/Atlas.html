@@ -1,0 +1,196 @@
+<!--RMIT University Vietnam
+  Course: COSC2430 Web Programming
+  Semester: 2023A
+  Assessment: Assignment 1
+  Author: Vu Loc
+  ID: S3891483
+  Acknowledgement: [1] https://fonts.google.com/ (Fonts from Google)
+  Acknowledgement: [2] https://fontawesome.com/ (Icons)
+  Acknowledgement: [3] https://www.youtube.com/watch?v=YgkzJkmDP3U&t=2s (@Media query)
+  Acknowledgement: [4] https://www.youtube.com/watch?v=RX53iC51CiQ&t=421s (Responsive NavBar)
+  Acknowledgement: [5] https://www.panmacmillan.com/ (Fiction, Non-Fiction, Children's Books imgs and details)
+  Acknowledgement: [6] https://tiki.vn/gia-trinh-dai-hoc-cao-dang/c6991 (TextBooks imgs and details)
+  Acknowledgement: [7] https://www.librarything.com/ (Reference Books imgs)
+  Acknowledgement: [8] https://open.umn.edu/opentextbooks/ (Textbooks imgs)
+  Acknowledgement: [9] https://www.scribd.com/books/Reference/Etiquette (Reference books)
+  Acknowledgement: [10] https://www.youtube.com/watch?v=99muDSuP55s&list=PL9bD98LkBR7P8MYh0RzNSHgeVNTA8g0nB&index=2 (Book detail page idea)
+  Acknowledgement: [11] https://www.youtube.com/watch?v=UaVTIH8mujA (The God Father youtube video trailer)
+  Acknowledgement: [12] https://www.goodreads.com/book/show/22034.The_Godfather (The God Father detail)
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="../style.css" />
+    <!-- Fonts from Google Font [1]-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons from font awesome [2]-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!---------- Header ----------->
+    <header>
+      <div class="header">
+        <!-- Divided Header into two Top and Bottom-->
+        <div class="main-header">
+          <!-- Top Header -->
+          <div class="top-header">
+            <!-- Logo img -->
+            <div class="logo">
+              <li>
+                <a href="../index.html">
+                  <img src="../images/logo.png" alt="Book Store Logo" />
+                </a>
+              </li>
+            </div>
+            <!-- Search Bar -->
+            <form action="#" class="search-bar">
+              <input type="search" id="search-box" placeholder="Search Books" />
+              <!-- Search Icon [2]-->
+              <div class="search-icon">
+                <i class="fa fa-search"></i>
+              </div>
+            </form>
+            <!-- Cart Icon and Sign in button-->
+            <div class="info">
+              <div class="fas fa-shopping-cart" id="cart-button"></div>
+              <li>
+                <a href="../Navbar/login.html" class="button">Sign in</a>
+              </li>
+            </div>
+          </div>
+
+          <!-- Bottom Header -->
+          <nav>
+            <input type="checkbox" id="list-menu" />
+            <div class="bottom-header">
+              <!-- Navigator -->
+              <label for="list-menu" class="list">
+                <span class="fas fa-bars" id="list-icon"></span>
+              </label>
+              <div class="bottom-logo">
+                <li>
+                  <a href="../index.html">
+                    <img src="../images/logo.png" alt="Book Store Logo" />
+                  </a>
+                </li>
+              </div>
+              <div class="menu">
+                <ul class="navmenu" id="navbar">
+                  <li>
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="#" class="Categories"> Categories</a>
+
+                    <!-- Submenu for categories -->
+                    <ul class="submenu">
+                      <li>
+                        <a href="../Categories/Fiction.html">Fiction</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Non-Fiction.html">Non-Fiction</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Children.html">Children</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Reference.html">Reference</a>
+                      </li>
+                      <li>
+                        <a href="../Categories/Textbook.html">Textbook</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="../Navbar/Book-Detail.html">Book Detail</a>
+                  </li>
+                  <li>
+                    <a href="../Navbar/Contact.html">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <!---------- Heading ----------->
+      <div class="page-heading">
+        <p>
+          <span><a href="../index.html">Home</a></span> >
+          <span><a href="../Categories/Fiction.html">Fiction</a></span> >
+          <span> Atlas: The Story of Pa Salt</span>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="container">
+          <div class="book-img">
+            <img
+              src="../images/Fiction/Fiction2.png"
+              alt="The God Father"
+            />
+          </div>
+          <div class="small-img">
+            <img src="../images/Fiction/atlas-back.png" alt="" />
+            <img src="../images/Fiction/atlas2.png" alt="" />
+            <img src="../images/Fiction/atlas3.png" alt="" />
+          </div>
+        </div>
+
+        <div class="Details">
+          <!--Reference from [10]-->
+          <h2>Atlas: The Story of Pa Salt</h2>
+          <h3>549,000 VND</h3>
+
+          <label for="cover" title="Book cover">
+            <!--Dropdown option for book cover-->
+            <select name="cover" class="select" required>
+              <option value="" disabled selected>Book Cover</option>
+              <option value="Softcover">Softcover</option>
+              <option value="Hardcover">Hardcover</option>
+            </select></label
+          >
+
+          <input type="number" class="number" value="1" />
+          <!--input number of books added to cart-->
+
+          <input type="button" value="Add to Cart" class="button" />
+
+          <h4>Book Detail</h4>
+          <p> <!--Atlas: The Story of Pa Salt [5]-->
+            Spanning a lifetime of love and loss, crossing borders and oceans, Atlas: The Story of Pa Salt, co-authored by her son Harry Whittaker, draws Lucinda Riley's saga to its stunning, unforgettable conclusion.          </p>
+          <span> <!--Embeded Video Trailer of The God Father [11]-->
+            <iframe
+              width="420"
+              height="250"
+              src="https://www.youtube.com/embed/V30LpKGgPeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!----------Footer ----------->
+    <section class="footer">
+      <div class="footer-nav">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="../Navbar/Contact.html">Contact Us</a>
+      </div>
+      <div class="copyright">Created by <span>Vu Loc</span></div>
+    </section>
+  </body>
+</html>
