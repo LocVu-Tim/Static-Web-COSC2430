@@ -468,16 +468,20 @@ section {
 .login-home {
   height: 100vh;
   width: 100%;
-  background-image: url(../images/login.png);
+  background-image: url('../images/login.png');
   background-size: cover;
   display: flex;
   justify-content: center;
   position: absolute;
 }
-.login-home .login-form{
+.login-home .login-form {
   width: 18.8rem;
   height: 22rem;
-  background: linear-gradient(to top, rgba(255, 248, 220, 0.897), rgba(255, 248, 220, 0.712));
+  background: linear-gradient(
+    to top,
+    rgba(255, 248, 220, 0.897),
+    rgba(255, 248, 220, 0.712)
+  );
   display: flex;
   flex-direction: column;
   border: var(--border);
@@ -485,13 +489,13 @@ section {
   padding: 1rem;
   margin-top: 10rem;
 }
-.login-form h2{
+.login-form h2 {
   font-size: 2rem;
   margin: 1rem;
   color: var(--main-color);
   text-align: center;
 }
-.login-form input{
+.login-form input {
   width: 16rem;
   height: 2rem;
   background: transparent;
@@ -500,27 +504,26 @@ section {
   margin-bottom: 1rem;
   font-size: 1rem;
 }
-.login-form input::placeholder{
+.login-form input::placeholder {
   color: var(--main-color);
 }
-.login-form .button{
+.login-form .button {
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
-.login-form p{
+.login-form p {
   color: var(--main-color);
   font-size: 1rem;
   padding: 1rem 0;
 }
-.login-form .Signup{
+.login-form .Signup {
   color: var(--main-color);
   font-size: 1rem;
   border-bottom: 0.1rem solid var(--main-color);
   width: fit-content;
 }
-
 
 /********************************* Footer ********************************/
 .footer {
