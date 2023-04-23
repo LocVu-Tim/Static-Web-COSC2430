@@ -473,7 +473,7 @@ position: absolute;
   padding: 0;
 }
 .background {
-  background-image: url("../images/login.png");
+  background-image: url("images/login.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
