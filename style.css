@@ -172,7 +172,9 @@ section {
   padding: 0.9rem 1rem;
   position: relative;
 }
-
+.bottom-header .menu ul .sign-in{
+  display: none;
+}
 /********************************* Categories Submenu ********************************/
 .bottom-header .menu ul li:hover > a {
   color: var(--main-color);
@@ -608,11 +610,13 @@ nav input {
     display: none;
     font-size: 80%;
   }
-
   .bottom-header .menu ul li a {
     display: block;
     padding: 0.3rem 0rem;
     font-size: 1.6rem;
+  }
+  .bottom-header .menu ul .sign-in{
+    display: contents;
   }
   .menu ul > li:hover > ul.submenu {
     left: 9rem;
