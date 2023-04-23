@@ -321,6 +321,7 @@ section {
   border-radius: 30px;
   padding: 1.3rem;
   width: 95%;
+  text-transform: none;
 }
 .contact .row form .box::placeholder {
   color: rgba(0, 0, 0, 0.699);
