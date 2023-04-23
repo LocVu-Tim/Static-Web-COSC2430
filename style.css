@@ -6,14 +6,14 @@
   ID: S3891483
   Acknowledgement: [1] https://fonts.google.com/ (Fonts from Google)
   Acknowledgement: [2] https://fontawesome.com/ (Icons)
-  Acknowledgement: [3] https://www.youtube.com/watch?v=YgkzJkmDP3U&t=2s (@Media query)
-  Acknowledgement: [4] https://www.youtube.com/watch?v=RX53iC51CiQ&t=421s (Responsive NavBar)
-  Acknowledgement: [5] https://www.panmacmillan.com/ (Fiction, Non-Fiction, Children's Books imgs and details)
-  Acknowledgement: [6] https://tiki.vn/gia-trinh-dai-hoc-cao-dang/c6991 (TextBooks imgs and details)
-  Acknowledgement: [7] https://www.librarything.com/ (Reference Books imgs)
-  Acknowledgement: [8] https://open.umn.edu/opentextbooks/ (Textbooks imgs)
-  Acknowledgement: [9] https://www.scribd.com/books/Reference/Etiquette (Reference books)
-
+  Acknowledgement: [3] https://www.youtube.com/watch?v=ol1OhEX5nRg (seperate headers from Youtube)
+  Acknowledgement: [4] https://www.youtube.com/watch?v=oLgtucwjVII (navigation menu from YouTube)
+  Acknowledgement: [5] https://www.youtube.com/watch?v=eKo1NV1qxbc (Dropdown submenu from YouTube)
+  Acknowledgement: [6] https://www.youtube.com/watch?v=YgkzJkmDP3U&t=2s (@Media query)
+  Acknowledgement: [7] https://www.youtube.com/watch?v=TaXql0h_wCA (Sticky Footer)
+  Acknowledgement: [8] https://www.youtube.com/watch?v=yN7kSfYodnc (Github linking issue)
+  Acknowledgement: [9] https://www.youtube.com/watch?v=99muDSuP55s&list=PL9bD98LkBR7P8MYh0RzNSHgeVNTA8g0nB&index=2 (Book detail page idea)
+  Acknowledgement: [10] https://www.youtube.com/watch?v=CQZxeoQeo5c&t=1405s (login page ideas and information)
 */
 
 /* Define Color Style */
@@ -45,7 +45,7 @@ section {
 .home {
   margin-top: 2rem;
 }
-/********************************* Header Style ********************************/
+/********************************* Header Style [5]********************************/
 .header {
   background: var(--white);
   display: flex;
@@ -129,7 +129,6 @@ section {
 }
 
 /* Buttons Style */
-
 .button {
   display: inline-block;
   padding: 1rem 1.4rem;
@@ -149,7 +148,7 @@ section {
   color: var(--main-color);
 }
 
-/********************************* Header Navigator Bar (main menu) ********************************/
+/********************************* Header Navigator Bar (main menu) [3]********************************/
 .bottom-header {
   display: flex;
   flex-wrap: wrap;
@@ -157,7 +156,7 @@ section {
   background: cornsilk;
   z-index: 1;
   width: 100%;
-  position: sticky;
+  position: sticky; /* I tried to make the header stick to the top but failed */
 }
 .bottom-header .menu ul li {
   display: inline-block;
@@ -172,24 +171,24 @@ section {
   padding: 0.9rem 1rem;
   position: relative;
 }
-.bottom-header .menu ul .sign-in{
+.bottom-header .menu ul .sign-in{ /* Sign in link only for responsive purpose*/
   display: none;
 }
-/********************************* Categories Submenu ********************************/
-.bottom-header .menu ul li:hover > a {
+/********************************* Categories Submenu [4]********************************/
+.bottom-header .menu ul li:hover > a { /* Hover effect for navigator menu*/ 
   color: var(--main-color);
   border-bottom: 0.1rem solid var(--main-color);
   transform: scale(1.1);
 }
-.menu ul > li:hover > ul.submenu {
+.menu ul > li:hover > ul.submenu { /* Hover to display submenu */
   display: block;
   opacity: 1;
   top: 100%;
 }
-
+/*Style submenu box*/
 .bottom-header .menu ul ul.submenu {
   color: var(--main-color);
-  display: none;
+  display: none; /* Do not show submenu element*/
   position: absolute;
   width: 10rem;
   background: rgb(255, 246, 207);
@@ -205,14 +204,14 @@ section {
   margin-left: 7px;
   display: block;
 }
-.bottom-header .menu ul ul.submenu > li > a {
+.bottom-header .menu ul ul.submenu > li > a { /* Style items inside submenu */
   padding: 8px 10px;
   font-size: 1rem;
   color: var(--cream);
   text-align: left;
   text-transform: capitalize;
 }
-.bottom-header .menu ul ul.submenu > li > a:hover {
+.bottom-header .menu ul ul.submenu > li > a:hover { /* Hover effect for items inside submenu */
   color: var(--main-color);
   transform: scale(1.1);
 }
@@ -240,12 +239,12 @@ section {
 
 /********************************* Images ********************************/
 .img-container {
-  display: grid;
+  display: grid; /*grid to organize imgs */
   grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   gap: 1rem;
   place-items: center;
 }
-.img-container .images {
+.img-container .images { /*center imgs */
   place-content: center;
   width: fit-content;
   justify-content: center;
@@ -253,7 +252,7 @@ section {
   text-align: center;
   padding: 2rem;
 }
-.images img {
+.images img { /*imgs sizing */
   height: 15rem;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -261,7 +260,7 @@ section {
 
 .images h3,
 .price {
-  text-align: center;
+  text-align: center; /*align title and price in center */
 }
 .images h3 {
   margin: 1rem 0;
@@ -278,16 +277,16 @@ section {
   font-size: 1rem;
   color: rgb(175, 103, 9);
 }
-.img-container .images a:hover {
+.img-container .images a:hover { /*hover effect for texts */
   text-decoration: underline;
   color: var(--main-color);
 }
-.img-container .images img:hover {
+.img-container .images img:hover { /*hover effect for imgs */
   transform: scale(1.2);
 }
 
 /********************************* Contact Page ********************************/
-.contact .row {
+.contact .row { /*Divided contact page into two, half for img half for form box */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -362,7 +361,7 @@ section {
   margin: 0.5rem 1rem;
 }
 
-/********************************* Book Detail Page ********************************/
+/* Book Detail Page [reference for ideas and information (9)]*/
 
 .page-heading {
   display: flex;
@@ -392,7 +391,7 @@ section {
   width: 50%;
   display: flex;
 }
-.book-img {
+.book-img { /* main img */
   width: 80%;
   height: 100%;
   display: flex;
@@ -403,7 +402,7 @@ section {
   width: 70%;
   border: var(--border);
 }
-.small-img {
+.small-img { /* small imgs */
   display: flex;
   gap: 0.5rem;
   flex-direction: column;
@@ -465,18 +464,18 @@ section {
   margin-bottom: 2rem;
 }
 
-/********************************* Login ********************************/
+/* Login [a lot of ideas and information were adapt from reference (10) */
 .login-home {
-position: absolute;
+  position: absolute;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 .background {
-  background-image: url("images/login.png");
+  background-image: url("images/login.png"); /* Kept trying until success for github ^smh */
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; /* The one and only help from chat gpt */
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -540,7 +539,7 @@ position: absolute;
   background: cornsilk;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; 
   position: sticky;
   top: 100%;
 }
@@ -572,23 +571,23 @@ position: absolute;
 .bottom-header .list {
   display: none;
 }
-nav input {
+nav input { /* Do not show list menu icon in desktop mode */
   display: none;
 }
 @media screen and (max-width: 1000px) {
   section {
     padding: 2rem;
   }
-  .top-header {
+  .top-header { /* Do not show top header in responsive */
     display: none;
   }
-  .info li {
+  .info li { /* Do not show cart icon and sign in button in responsive */
     display: none;
   }
-  .logo {
+  .logo { /* Do not show top logo in responsive */
     display: none;
   }
-  .search-bar {
+  .search-bar { /* Do not show search bar in responsive */
     display: none;
   }
 }
@@ -598,14 +597,14 @@ nav input {
   .bottom-header {
     padding-top: 40px;
   }
-  .menu {
+  .menu { /* display verticle navigator menu in responsive as assigned */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin-top: 1rem;
   }
-  .navmenu {
+  .navmenu { /* Do not show header when not interacting */
     display: none;
     margin-bottom: 1rem;
   }
@@ -624,7 +623,7 @@ nav input {
     flex-direction: column;
     position: unset;
   }
-  .bottom-logo img {
+  .bottom-logo img { /* display logo in header in responsive */
     display: block;
     position: absolute;
     margin: 0;
@@ -634,7 +633,7 @@ nav input {
   }
 
   /********** List Menu Finaly!!! **********/
-  .bottom-header .list {
+  .bottom-header .list {/* display list icon in header in responsive */
     position: absolute;
     margin: 0;
     top: 6px;
@@ -645,11 +644,11 @@ nav input {
     font-size: 2rem;
     display: block;
   }
-  #list-menu:checked ~ .bottom-header .navmenu {
+  #list-menu:checked ~ .bottom-header .navmenu { /* interact list menu icon to open navigator menu */
     display: flex;
     flex-direction: column;
   }
-  #list-menu:checked ~ .bottom-header {
+  #list-menu:checked ~ .bottom-header { /* I could not get the navmenu to should full background, so I use the entire bottom header background instead */
     display: flex;
     height: 100%;
   }
@@ -657,7 +656,7 @@ nav input {
 
 /********** Contact Page ***********/
 @media screen and (max-width: 1000px) {
-  .contact .row .contact-img img {
+  .contact .row .contact-img img { /* do not display contact img in responsive */
     display: none;
   }
   .contact .row form {
@@ -738,7 +737,7 @@ nav input {
   .footer .footer-nav {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; /* Receive help from friends to style footer's column responsive */
     align-items: center;
     top: 100%;
   }
