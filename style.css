@@ -34,7 +34,6 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
-  scroll-behavior: smooth;
   list-style: none;
 }
 body {
@@ -466,28 +465,35 @@ section {
 
 /********************************* Login ********************************/
 .login-home {
-  height: 100vh;
+position: absolute;
   width: 100%;
-  background-image: url('../images/login.png');
+  margin: 0;
+  padding: 0;
+}
+.background {
+  background-image: url("../images/login.png");
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  position: absolute;
+  height: 100vh;
+  width: 100%;
 }
-.login-home .login-form {
-  width: 18.8rem;
+.login-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
   height: 22rem;
+  margin-top: 4rem;
   background: linear-gradient(
     to top,
     rgba(255, 248, 220, 0.897),
     rgba(255, 248, 220, 0.712)
   );
-  display: flex;
-  flex-direction: column;
   border: var(--border);
   border-radius: 30px;
   padding: 1rem;
-  margin-top: 10rem;
 }
 .login-form h2 {
   font-size: 2rem;
