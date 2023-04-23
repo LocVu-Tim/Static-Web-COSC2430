@@ -604,12 +604,10 @@ nav input {
     align-items: center;
     text-align: center;
     margin-top: 1rem;
-    position: sticky;
-    font-size: 80%;
   }
   .navmenu {
     display: none;
-    font-size: 80%;
+    margin-bottom: 1rem;
   }
   .bottom-header .menu ul li a {
     display: block;
