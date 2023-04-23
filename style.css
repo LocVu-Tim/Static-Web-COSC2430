@@ -387,10 +387,13 @@ section {
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 4rem;
 }
 .home .row .container {
   width: 50%;
   display: flex;
+  margin-bottom: 10rem;
+  height: 100%;
 }
 .book-img { /* main img */
   width: 80%;
@@ -682,6 +685,7 @@ nav input { /* Do not show list menu icon in desktop mode */
     display: flex;
     flex-direction: column;
     width: 80%;
+    margin: 0;
   }
   .container .book-img {
     width: 100%;
