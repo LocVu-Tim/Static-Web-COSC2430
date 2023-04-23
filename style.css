@@ -476,6 +476,7 @@ position: absolute;
   background-image: url("../images/login.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -723,6 +724,9 @@ nav input {
   }
   .contact .row form {
     margin-top: 2rem;
+  }
+  .login-home .background {
+    height: calc(100vh - 56px);
   }
 }
 /**********Footer ***********/
